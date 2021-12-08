@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="container-login">
+
+    <img class="img-text" src="assets/figures/japastel.png" alt="">
+    <img class="img-logo" src="assets/figures/logo_japastel.jpeg" alt="">
+
+    <mat-form-field appearance="outline">
+        <mat-label>CPF</mat-label>
+        <input matInput placeholder="Insira seu CPF">
+        <mat-icon matSuffix>
+            <img appIcon src="https://cdn-icons-png.flaticon.com/512/1071/1071164.png" alt="">
+        </mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput placeholder="Insira sua senha">
+        <mat-icon matSuffix>
+            <img appIcon src="https://cdn-icons.flaticon.com/png/512/2682/premium/2682065.png?token=exp=1638926337~hmac=f78835d917a95ea63c17e77ce401347f" alt="">
+        </mat-icon>
+        <mat-hint>CPF ou senha inválidos</mat-hint>
+    </mat-form-field>
+
+    
+    <button mat-raised-button color="primary" appButton>Entrar</button>
+
+    <button mat-raised-button color="primary" appButton class="btn-google">Google + login</button>
+    <button mat-raised-button color="primary" appButton class="btn-facebook">Facebook + login</button>
+
+</div>

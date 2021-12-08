@@ -1,0 +1,28 @@
+@import 'src/assets/styles/colors.scss';
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-text {
+    width: 210px;
+    margin-top: 30px;
+}
+
+.img-logo {
+    width: 180px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-google {
+    margin-top: 30px;
+    background-color: $default-google;
+}
+
+.btn-facebook {
+    margin-top: 5px;
+    background-color: $default-facebook;
+}

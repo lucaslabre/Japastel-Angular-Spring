@@ -1,0 +1,50 @@
+<mat-toolbar color="primary">
+
+    <span>Pedidos</span>
+    <span class="example-spacer"></span>
+    <span class="material-icons" [matMenuTriggerFor]="menu"> menu </span>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/pedidos">
+            <mat-icon>
+                <img appIcon src="https://cdn-icons.flaticon.com/png/512/3514/premium/3514211.png?token=exp=1638911688~hmac=31ad451b815604bd2a566a42f85443b4" alt="">
+            </mat-icon>
+            <span>Pedidos</span>
+        </button>
+
+        <button mat-menu-item>
+            <mat-icon>
+                <img appIcon src="https://cdn-icons.flaticon.com/png/512/2041/premium/2041643.png?token=exp=1638911427~hmac=305a58d3fa712c60442f2c87c16c9af9" alt="">
+            </mat-icon>
+            <span>Estatísticas</span>
+        </button>
+
+        <button mat-menu-item>
+            <mat-icon>
+                <img appIcon src="https://cdn-icons.flaticon.com/png/512/1601/premium/1601884.png?token=exp=1638911737~hmac=7a19f0b37d835ea6fe5674a3a87014c8" alt="">
+            </mat-icon>
+            <span>Atualizar Itens</span>
+        </button>
+
+        <button mat-menu-item>
+            <mat-icon>
+                <img appIcon src="https://cdn-icons-png.flaticon.com/512/3456/3456426.png" alt="">
+            </mat-icon>
+            <span>Cadastrar Usuário</span>
+        </button>
+
+        <button mat-menu-item>
+            <mat-icon>
+                <img appIcon src="https://cdn-icons-png.flaticon.com/512/1071/1071164.png" alt="">
+            </mat-icon>
+            <span>Perfil</span>
+        </button>
+
+        <button mat-menu-item>
+            <mat-icon>
+                <img appIcon src="https://cdn-icons-png.flaticon.com/512/603/603120.png" alt="">
+            </mat-icon>
+            <span>Sair</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>
