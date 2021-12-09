@@ -1,3 +1,27 @@
 <app-header></app-header>
-<p>pedidos-page works!</p>
-<app-footer></app-footer>
+<div class="container">
+    <div class="send-button">
+        <button mat-mini-fab color="primary" (click)="send()">+</button>
+    </div>
+    <mat-card>
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header> Pasteis </mat-expansion-panel-header>
+                <!-- {{  }} -->
+                <app-product-list [products]="getProductsByGroupType('pastel')"></app-product-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header> Bolinhos </mat-expansion-panel-header>
+                <app-product-list [products]="getProductsByGroupType('bolinho')"></app-product-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header> Bebidas </mat-expansion-panel-header>
+                <app-product-list [products]="getProductsByGroupType('bebida')"></app-product-list>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card>
+
+</div>
+<!-- <app-footer></app-footer> -->

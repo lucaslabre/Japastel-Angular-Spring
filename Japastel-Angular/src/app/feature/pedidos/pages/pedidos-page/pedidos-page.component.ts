@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../models/product.interface';
+import { PedidosService } from '../../services/pedidos.service';
 
 @Component({
   templateUrl: './pedidos-page.component.html',
@@ -6,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidosPageComponent implements OnInit {
 
-  constructor() { }
+  panelOpenState = false;
 
-  ngOnInit(): void {
+  products: Array<Product> = this.pedidosService.getProducts();
+  selectedProducts: Array<Product> = this.pedidosService.getSelectedProducts();
+
+  constructor(
+    private pedidosService: PedidosService
+  ) { }
+
+  ngOnInit(): void { }
+
+  getProductsByGroupType(groupType: string): Array<Product> {
+    return this.pedidosService.getProductsByGroupType(groupType);
+  }
+
+  send() {
+    
   }
 
 }

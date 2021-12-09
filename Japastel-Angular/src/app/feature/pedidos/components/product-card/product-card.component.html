@@ -1,0 +1,7 @@
+<div *ngIf="product" class="container-card">
+    <span class="count">{{ count }}</span>
+    <button mat-raised-button class="sum-button" (click)="cart(product)">
+        {{ product.name }}
+    </button>
+    <button mat-raised-button class="subtract-button" (click)="subtract(product)">-1</button>
+</div>

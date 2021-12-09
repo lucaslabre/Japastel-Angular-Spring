@@ -1,0 +1,14 @@
+.container-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.send-button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    button {
+        font-size: 25px;
+    }
+}

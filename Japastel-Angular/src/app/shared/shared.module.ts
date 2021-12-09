@@ -13,6 +13,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCardModule} from '@angular/material/card';
 
 
 const components = [
@@ -26,7 +28,9 @@ const materialModules = [
   MatIconModule,
   MatMenuModule,
   MatInputModule,
-  MatButtonModule
+  MatButtonModule,
+  MatExpansionModule,
+  MatCardModule
 ];
 
 const directives = [
