@@ -41,4 +41,22 @@ export class PedidosService {
     this.selectedProducts.splice(removedProduct, 1);
   }
 
+  countProducts(products: Array<Product>): (number | Product)[][] {
+    const sortedProducts = products.sort((Pa, Pb) => Pa._id - Pb._id);
+    console.log(sortedProducts);
+    let cart = [];
+    let count = 1;
+    for (let i = 1; i < sortedProducts.length; i++) {
+      if (sortedProducts[i]._id == sortedProducts[i-1]._id) {
+        count += 1;
+      } else {
+        cart.push([count, sortedProducts[i-1]]);
+        count = 1;
+      }
+    }
+    cart.push([count, sortedProducts[sortedProducts.length-1]]);
+    console.log(cart);
+    return cart;
+  }
+
 }
