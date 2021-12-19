@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PedidosModule } from './feature/pedidos/pedidos.module';
 import { LoginModule } from './feature/login/login.module';
+import { UserModule } from './feature/user/user.module';
 
 // **************************************************
 // Formatar moeda para real. Ex: R$ 5.000,00
@@ -24,7 +25,8 @@ registerLocaleData(ptBr);
     AppRoutingModule,
     BrowserAnimationsModule,
     PedidosModule,
-    LoginModule
+    LoginModule,
+    UserModule
   ],
   providers: [
     // ************************************

@@ -1,0 +1,14 @@
+<div class="container-card" *ngIf="user">
+    <mat-card class="card">
+        <div>
+            <mat-card-title> {{ user.name }} </mat-card-title>
+            <mat-card-subtitle> {{ user.type }} </mat-card-subtitle>
+        </div>
+        <div class="card-info">
+            <p> {{ user.cpf }} </p>
+            <p> {{ user.email }} </p>
+            <p> {{ user.tel }} </p>
+        </div>
+        <button mat-raised-button>Editar</button>
+    </mat-card>
+</div>
