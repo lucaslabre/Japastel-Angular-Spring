@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './login-page.component.html',
@@ -7,9 +8,19 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor() { }
+  loginForm = new FormGroup({
+    cpf: new FormControl(''),
+    password: new FormControl('')
+  });
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit () {
+    sessionStorage.setItem('currentUser', JSON.stringify(this.loginForm.value));
+    this.router.navigateByUrl('/pedidos');
   }
 
 }
