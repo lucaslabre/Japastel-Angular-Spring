@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/feature/user/models/user.model';
 import { UserService } from 'src/app/feature/user/services/user.service';
@@ -11,6 +11,9 @@ import { UserService } from 'src/app/feature/user/services/user.service';
 export class HeaderComponent implements OnInit {
 
   user?: User;
+
+  @Input()
+  head: string = '';
 
   constructor(
     private router: Router,
