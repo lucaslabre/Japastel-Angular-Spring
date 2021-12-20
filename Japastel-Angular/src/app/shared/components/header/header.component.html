@@ -19,14 +19,14 @@
             <span>Estatísticas</span>
         </button>
 
-        <button mat-menu-item>
+        <button *ngIf="user.type === 'adm'" mat-menu-item>
             <mat-icon>
                 <img appIcon src="https://cdn-icons.flaticon.com/png/512/1601/premium/1601884.png?token=exp=1638911737~hmac=7a19f0b37d835ea6fe5674a3a87014c8" alt="">
             </mat-icon>
             <span>Atualizar Itens</span>
         </button>
 
-        <button mat-menu-item>
+        <button *ngIf="user.type === 'adm'" mat-menu-item>
             <mat-icon>
                 <img appIcon src="https://cdn-icons-png.flaticon.com/512/3456/3456426.png" alt="">
             </mat-icon>
@@ -40,7 +40,7 @@
             <span>Perfil</span>
         </button>
 
-        <button mat-menu-item>
+        <button mat-menu-item (click)="exit()">
             <mat-icon>
                 <img appIcon src="https://cdn-icons-png.flaticon.com/512/603/603120.png" alt="">
             </mat-icon>
