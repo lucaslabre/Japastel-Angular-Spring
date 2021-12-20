@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from 'src/app/feature/user/models/user.model';
+import { UserService } from 'src/app/feature/user/services/user.service';
 
 @Component({
   templateUrl: './login-page.component.html',
@@ -13,14 +15,23 @@ export class LoginPageComponent implements OnInit {
     password: new FormControl('')
   });
 
-  constructor(private router: Router) { }
+  user?: User;
+
+  constructor(
+    private router: Router,
+    private userService: UserService
+  ) { }
 
   ngOnInit(): void {
   }
 
   onSubmit () {
-    sessionStorage.setItem('currentUser', JSON.stringify(this.loginForm.value));
-    this.router.navigateByUrl('/pedidos');
+    const login = this.loginForm.value;
+    this.user = this.userService.getUserByCPFandPassword(login.cpf, login.password);
+    if (this.user) {
+      sessionStorage.setItem('currentUser', JSON.stringify(this.user.id));
+      this.router.navigateByUrl('/pedidos');
+    }
   }
 
 }

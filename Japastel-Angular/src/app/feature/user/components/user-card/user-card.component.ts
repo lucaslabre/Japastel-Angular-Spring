@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { User } from '../../models/user.model';
-import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-user-card',
@@ -9,21 +8,11 @@ import { UserService } from '../../services/user.service';
 })
 export class UserCardComponent implements OnInit {
 
+  @Input()
   user?: User;
 
-  constructor(
-    private userService: UserService
-  ) { }
+  constructor( ) { }
 
-  ngOnInit(): void { 
-    const userStorage = sessionStorage.getItem('currentUser');
-    if (userStorage) {
-      const userJson = JSON.parse(userStorage);
-      this.user = this.userService.getUserByCPFandPassword(userJson.cpf, userJson.password);
-    }
-  }
+  ngOnInit(): void { }
 
-  setUser () {
-
-  }
 }

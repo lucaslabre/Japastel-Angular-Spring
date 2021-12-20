@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="user" >
 
     <span>Pedidos</span>
     <span class="example-spacer"></span>
@@ -33,7 +33,7 @@
             <span>Cadastrar Usuário</span>
         </button>
 
-        <button mat-menu-item routerLink="/perfil">
+        <button mat-menu-item [routerLink]="['/perfil', user.id]">
             <mat-icon>
                 <img appIcon src="https://cdn-icons-png.flaticon.com/512/1071/1071164.png" alt="">
             </mat-icon>

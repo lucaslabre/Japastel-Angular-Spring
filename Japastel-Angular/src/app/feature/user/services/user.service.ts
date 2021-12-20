@@ -45,4 +45,8 @@ export class UserService {
   getUserByCPFandPassword (cpf: string, password: string): User | undefined {
     return this.users.find((user) => user.cpf === cpf && user.password === password);
   }
+
+  getUserById (id: number): User | undefined {
+    return this.users.find((user) => user.id === Number(id));
+  }
 }
