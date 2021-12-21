@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { IconDirective } from './directives/icon.directive';
 import { ButtonDirective } from './directives/button.directive';
+import { UserTypePipe } from './pipes/user-type.pipe';
 
 // Material Imports
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -15,6 +16,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
+import { CpfPipe } from './pipes/cpf.pipe';
+import { CelularPipe } from './pipes/celular.pipe';
 
 
 const components = [
@@ -39,6 +42,9 @@ const directives = [
 ]
 
 const pipes = [
+  UserTypePipe,
+  CpfPipe,
+  CelularPipe,
 ];
 
 
@@ -46,7 +52,7 @@ const pipes = [
   declarations: [
     ...components,
     ...directives,
-    // ...pipes,
+    ...pipes,
   ],
   imports: [
     CommonModule,
@@ -57,7 +63,7 @@ const pipes = [
     ...components,
     ...materialModules,
     ...directives,
-    // ...pipes
+    ...pipes
   ]
 })
 export class SharedModule { }
