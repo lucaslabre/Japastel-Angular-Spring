@@ -18,6 +18,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
 import { CpfPipe } from './pipes/cpf.pipe';
 import { CelularPipe } from './pipes/celular.pipe';
+import { RedDirective } from './directives/red.directive';
 
 
 const components = [
@@ -39,6 +40,7 @@ const materialModules = [
 const directives = [
   IconDirective,
   ButtonDirective,
+  RedDirective,
 ]
 
 const pipes = [

@@ -17,6 +17,8 @@ export class LoginPageComponent implements OnInit {
 
   user?: User;
 
+  valid = true;
+
   constructor(
     private router: Router,
     private userService: UserService
@@ -30,8 +32,9 @@ export class LoginPageComponent implements OnInit {
     this.user = this.userService.getUserByCPFandPassword(login.cpf, login.password);
     if (this.user) {
       sessionStorage.setItem('currentUser', JSON.stringify(this.user.id));
-      this.router.navigateByUrl('/pedidos');
+      return this.router.navigateByUrl('/pedidos');
     }
+    return this.valid = false;
   }
 
 }
